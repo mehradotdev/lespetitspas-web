@@ -3,7 +3,6 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: 'https://lespetitspas-v2.mehra.dev',
   vite: {
     plugins: [tailwindcss()],
   },
