@@ -1,0 +1,61 @@
+---
+// About section featuring instructor Shruti Singh
+import { Globe, GraduationCap, Target } from '@lucide/astro';
+---
+
+<section id="about" class="py-20 bg-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex flex-col lg:flex-row items-center gap-12">
+			<div class="flex-1 relative">
+        <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+          <img
+            src="/shrutiPic.jpeg"
+            alt="Shruti Singh, experienced French and English language instructor"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+      </div>
+
+			<div class="flex-1 space-y-6">
+				<div class="badge badge-accent badge-lg font-bold">Meet Your Instructor</div>
+				<h2 class="text-3xl md:text-4xl font-bold text-secondary-content">Learn from an Expert Who's Lived the Language.</h2>
+				<p class="text-lg text-gray-600 leading-relaxed">
+					Bonjour! My name is Shruti, and my passion is helping students discover the joy of language. With a Master's degree in French from Delhi University and a year spent living and teaching in France, I bring both academic excellence and real-world, authentic experience to every lesson.
+				</p>
+				
+				<div class="space-y-4">
+					<div class="flex items-start gap-3">
+						<div class="badge badge-secondary badge-lg py-4">
+							<Globe class="text-secondary-content" size={24} />
+						</div>
+						<div>
+							<h4 class="font-semibold text-gray-800">Native-Level Proficiency</h4>
+							<p class="text-gray-600">Immerse yourself in authentic pronunciation and cultural subtleties.</p>
+						</div>
+					</div>
+					
+					<div class="flex items-start gap-3">
+						<div class="badge badge-secondary badge-lg py-4">
+							<GraduationCap class="text-secondary-content" size={24} />
+						</div>
+						<div>
+							<h4 class="font-semibold text-gray-800">Proven Teaching Experience</h4>
+							<p class="text-gray-600">Benefit from methods honed by teaching English to French students in France.</p>
+						</div>
+					</div>
+					
+					<div class="flex items-start gap-3">
+						<div class="badge badge-secondary badge-lg py-4">
+							<Target class="text-secondary-content" size={24} />
+						</div>
+						<div>
+							<h4 class="font-semibold text-gray-800">Personalized Approach</h4>
+							<p class="text-gray-600">Tailored curriculum for each student's unique needs and learning pace.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
