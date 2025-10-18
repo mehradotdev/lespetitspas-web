@@ -2,13 +2,13 @@
 // Navbar component with responsive menu
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 glass shadow-sm p-2">
+<header class="fixed top-0 left-0 right-0 z-100 bg-white/95 glass shadow-sm p-2">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex space-between">
     <div class="navbar-start">
       <a
-        href="/"
-        class="btn btn-ghost text-2xl font-bold text-secondary-content hover:text-secondary-content/80"
-        style="font-family: Poppins, serif;"
+        href="/#"
+        class="btn btn-ghost text-4xl leading-relaxed font-bold text-secondary-content hover:text-secondary-content/80"
+        style="font-family: Caveat Brush, serif;"
       >
         lespetitspas
       </a>
@@ -19,28 +19,39 @@
         <li>
           <a
             href="#features"
-            class="text-gray-700 text-base hover:text-secondary-content font-medium">Features</a>
+            class="text-gray-700 text-base hover:text-secondary-content font-medium"
+            >Features</a
+          >
         </li>
         <li>
           <a
             href="#testimonials"
             class="text-gray-700 text-base hover:text-secondary-content font-medium"
-            >Testimonials</a>
+            >Testimonials</a
+          >
         </li>
         <li>
-          <a href="#about" class="text-gray-700 text-base hover:text-secondary-content font-medium"
-            >About Shruti</a>
+          <a
+            href="#about"
+            class="text-gray-700 text-base hover:text-secondary-content font-medium"
+            >About Shruti</a
+          >
         </li>
         <li>
           <a
             href="#contact"
-            class="text-gray-700 text-base hover:text-secondary-content font-medium">Contact</a>
+            class="text-gray-700 text-base hover:text-secondary-content font-medium"
+            >Contact</a
+          >
         </li>
       </ul>
     </div>
 
     <div class="navbar-end gap-2">
-      <a href="#contact" class="btn btn-accent hidden sm:inline-flex text-base">
+      <a
+        href="#contact"
+        class="btn btn-accent hidden sm:inline-flex text-base transition-all duration-300 hover:scale-105"
+      >
         Book a Free Demo
       </a>
 
@@ -64,10 +75,10 @@
           tabindex="0"
           class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52"
         >
-          <li><a href="#features">Features</a></li>
-          <li><a href="#about">About Shruti</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#features" class="text-base">Features</a></li>
+          <li><a href="#about" class="text-base">About Shruti</a></li>
+          <li><a href="#testimonials" class="text-base">Testimonials</a></li>
+          <li><a href="#contact" class="text-base">Contact</a></li>
         </ul>
       </div>
     </div>

@@ -1,20 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Hero from '../components/Hero.astro';
-import Features from '../components/Features.astro';
-import About from '../components/About.astro';
-import Testimonials from '../components/Testimonials.astro';
-import CTA from '../components/CTA.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Features from "../components/Features.astro";
+import About from "../components/About.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CTA from "../components/CTA.astro";
+import Footer from "../components/Footer.astro";
+import { Phone } from "@lucide/astro";
 ---
 
 <Layout>
-	<Navbar />
-	<Hero />
-	<Features />
-	<Testimonials />
-	<About />
-	<CTA />
-	<Footer />
+  <Navbar />
+  <Hero />
+  <Features />
+  <Testimonials />
+  <About />
+  <CTA />
+  <Footer />
+
+  <!-- Floating Button -->
+  <a
+    href="https://wa.me/917303319946"
+    target="_blank"
+    class="btn btn-xl btn-circle bg-green-500 fixed bottom-8 right-8 transition-all duration-300 hover:scale-105 border-0 shadow-xl"
+  >
+    <i class="fa fa-whatsapp fa-lg text-white"></i>
+  </a>
 </Layout>
