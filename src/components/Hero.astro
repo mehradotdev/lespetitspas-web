@@ -8,7 +8,7 @@
       class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20"
     >
       <!-- Text Content -->
-      <div class="space-y-8 flex-1 lg:max-w-xl">
+      <div class="space-y-8 flex-1 lg:max-w-xl text-center lg:text-left">
         <h1
           class="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral leading-tight"
         >
@@ -18,7 +18,7 @@
           Personalized 1-on-1 online classes tailored to your learning goals.
           Perfect for exam preparation (DELF, IELTS), kids, and professionals.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <a
             href="#contact"
             class="btn btn-accent btn-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
@@ -106,68 +106,3 @@
     </div>
   </div>
 </section>
-
-<script>
-  // Handle touch events for mobile devices to simulate hover effect
-  const polaroids = document.querySelectorAll(".polaroid");
-  let activePhoto: HTMLElement | null = null;
-  let touchTimer: number | null = null;
-
-  polaroids.forEach((polaroid) => {
-    const element = polaroid as HTMLElement;
-
-    // Touch start - begin long press detection
-    element.addEventListener("touchstart", (e) => {
-      // Prevent default to avoid unwanted behaviors
-      e.preventDefault();
-
-      // Set a timer for long press (300ms)
-      touchTimer = window.setTimeout(() => {
-        // Remove active state from previously active photo
-        if (activePhoto && activePhoto !== element) {
-          activePhoto.classList.remove("!z-50", "!scale-105");
-        }
-
-        // Add active state to current photo
-        element.classList.add("!z-50", "!scale-105");
-        activePhoto = element;
-      }, 300);
-    });
-
-    // Touch end - clear timer and optionally remove active state
-    element.addEventListener("touchend", (e) => {
-      if (touchTimer) {
-        clearTimeout(touchTimer);
-        touchTimer = null;
-      }
-
-      // Remove active state after a short delay
-      setTimeout(() => {
-        element.classList.remove("!z-50", "!scale-105");
-        if (activePhoto === element) {
-          activePhoto = null;
-        }
-      }, 200);
-    });
-
-    // Touch cancel - clear timer and remove active state
-    element.addEventListener("touchcancel", () => {
-      if (touchTimer) {
-        clearTimeout(touchTimer);
-        touchTimer = null;
-      }
-      element.classList.remove("!z-50", "!scale-105");
-      if (activePhoto === element) {
-        activePhoto = null;
-      }
-    });
-
-    // Touch move - cancel if user moves finger too much
-    element.addEventListener("touchmove", () => {
-      if (touchTimer) {
-        clearTimeout(touchTimer);
-        touchTimer = null;
-      }
-    });
-  });
-</script>
