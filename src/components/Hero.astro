@@ -5,10 +5,10 @@
 <section id="hero" class="pt-32 pb-0 bg-gradient-to-b from-base-200 to-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div
-      class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20"
+      class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20 relative"
     >
       <!-- Text Content -->
-      <div class="space-y-8 flex-1 lg:max-w-xl text-center lg:text-left">
+      <div class="space-y-8 flex-1 lg:max-w-xl text-center lg:text-left relative z-20">
         <h1
           class="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral leading-tight"
         >
@@ -35,6 +35,9 @@
           </a>
         </div>
       </div>
+
+      <!-- Logo in middle left in background -->
+      <img class="absolute bottom-[-33%] md:bottom-[-13%] lg:left-[7%] lg:bottom-[-11%] opacity-15 h-[100%] md:h-[50%] lg:h-[80%]" src="/logo.svg" alt="lespetitspas logo" />
 
       <!-- Polaroid Photo Stack -->
       <div
